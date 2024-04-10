@@ -11,9 +11,11 @@ before it.
 Your program will return this list of words, along with the indexes of each letter. Type
 details for inputs and output are language-specific and will be described below. The list of
 words returned by your program will be validated, and assigned a score
+
 | Word length | 1| 2 | 3 | 4| 5 | 6| 7 | 8+ |
 |----------|----------|----------|----------|----------|----------|----------|----------|----------|
 | Points | 1 | 2 | 4 | 6 | 9 | 12 | 16 | 20 |
+
 
 # Variations from the official game
 - Traditional Boggle has a minimum word length of 3, but for this project it will be 1.
@@ -59,40 +61,52 @@ in the 4x4 example.
 #### This solution scores 2*2 + 4*4 + 4*6 = 44 points total
 
 # Elixir:
-Input: The first argument, representing the game board, is a tuple of tuples whose elements
+- **Input:** The first argument, representing the game board, is a tuple of tuples whose elements
 are strings. The second argument is a list of strings containing the legal words for that game.
 For example, the 2x2 example would be: {{“e”, “a”}, {“s”, “t”}} and the legal
 word list would be: [“word1”, “word2”, ... ] and so on.
-Output: The output will be a map, which is Elixir’s dictionary equivalent:
-https://hexdocs.pm/elixir/1.12/Map.html
+- **Output:** The output will be a map, which is Elixir’s dictionary [equivalent:](https://hexdocs.pm/elixir/1.12/Map.html)
 Keys will be strings, and the values will be a list of coordinates. Each coordinate will be a
 pair tuple. For example, a map containing only the word ‘seat’ would be represented as
 follows: %{ “seat”=>[ {1, 0}, {0, 0}, {0, 1}, {1, 1} ] }
 
+Run Tester using 
+```
+mix test
+```
 # Haskell:
-Input: Haskell’s argument types differ a bit from Elixir’s. The board will be a list of Strings,
+- **Input:** Haskell’s argument types differ a bit from Elixir’s. The board will be a list of Strings,
 where each string represents a row. The legal word list will also be a list of strings.
 Output: Your boggle function should return a list of tuples. Each tuple contains two
 elements. The first element is a string (the word), and the second element is a list of pair
 tuples, where each pair tuple contains the coordinates of the corresponding letter in the
 string. The word ‘seat’ from the 2x2 board would be represented as follows:
 [ (“seat”, [ (1,0), (0,0), (0,1), (1,1) ]) ]
-Haskell also has a Map type that you may find useful, but you are not required to use it:
-https://hackage.haskell.org/package/containers-0.4.0.0/docs/Data-Map.html
+Haskell also has a Map type that you may find useful, but you are not required to use [it](https://hackage.haskell.org/package/containers-0.4.0.0/docs/Data-Map.html)
+
+Run Tester using 
+```
+cabal test
+```
 
 # Rust:
-Input: The game board in Rust will be passed as a reference to an immutable array of string
+- **Input:** The game board in Rust will be passed as a reference to an immutable array of string
 slices – each slice is a row of the board. The legal word list will be passed as a reference to
 an immutable Vector of Strings.
-Output: Your boggle function will return a HashMap, whose keys are the words you’ve
+- **Output:** Your boggle function will return a HashMap, whose keys are the words you’ve
 found (String) and whose values are Vectors of pair tuples representing character
 coordinates. Documentation for Vector and HashMap is below.
 https://doc.rust-lang.org/std/vec/struct.Vec.html
 https://doc.rust-lang.org/std/collections/struct.HashMap.html
 
-mix test
-
+Run Tester using 
+```
 cargo test
+```
 
-cabal test
+
+
+
+
+
 
