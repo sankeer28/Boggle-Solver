@@ -1,16 +1,16 @@
 # Boggle-Solver
-Boggle solver in Elixir,Haskell,and Rust. 
+Boggle solver in Elixir, Haskell, and Rust. 
 Finds connected chains of letters that form legal words. The basic rules of the game can be found [here](https://en.wikipedia.org/wiki/Boggle)
 
-The first input to your program will be an square grid of letters. The second input will be a list
+The first input to your program will be a square grid of letters. The second input will be a list
 of legal words. Your task is to search for unique, legal words in the letter grid according to
 the rules of Boggle (see Wikipedia link above for more info):
-- Each letter after the first must be a horizontal, vertical, or diagonal neighbor of the one
+- Each letter after the first must be a horizontal, vertical, or diagonal neighbour of the one
 before it.
 - No individual letter cube may be used more than once in a word.
 Your program will return this list of words, along with the indexes of each letter. Type
 details for inputs and output are language-specific and will be described below. The list of
-words returned by your program will be validated, and assigned a score
+words returned by your program will be validated and assigned a score
 
 | Word length | 1| 2 | 3 | 4| 5 | 6| 7 | 8+ |
 |----------|----------|----------|----------|----------|----------|----------|----------|----------|
@@ -18,7 +18,7 @@ words returned by your program will be validated, and assigned a score
 
 
 # Variations from the official game
-- Traditional Boggle has a minimum word length of 3, but for this project it will be 1.
+- Traditional Boggle has a minimum word length of 3, but for this project, it will be 1.
 - Word scoring also differs. See the table above.
 - A traditional game of Boggle uses a 4x4 grid.
 - The input to your program can be as small as 2x2 and grow arbitrarily large to 16x16.
