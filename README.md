@@ -1,8 +1,8 @@
 # Boggle-Solver
-Boggle solver in Elixir,Haskell,and Rust
-You are given an N*N grid of letters, and your task is to find connected chains of letters that form legal words. The basic rules of the game can be found at this [link](https://en.wikipedia.org/wiki/Boggle)
+Boggle solver in Elixir,Haskell,and Rust. 
+Finds connected chains of letters that form legal words. The basic rules of the game can be found [here](https://en.wikipedia.org/wiki/Boggle)
 
-The first input to your program will be an N*N grid of letters. The second input will be a list
+The first input to your program will be an square grid of letters. The second input will be a list
 of legal words. Your task is to search for unique, legal words in the letter grid according to
 the rules of Boggle (see Wikipedia link above for more info):
 - Each letter after the first must be a horizontal, vertical, or diagonal neighbor of the one
@@ -35,7 +35,7 @@ example that all standard English words are legal.
 |n|	e	|p|	a|
 |n|	t	|s|	u|
 
-**legal words**: is son spa sent vast issue so sap ape oven nice events us ten east nose save sonnet us ten east nose save sonnet
+**legal words**: is, son, spa, sent, vast, issue, so, sap, ape, oven, nice, events, us, ten, east, nose, save, sonnet, us, ten, east, nose, save, sonnet
 
 The words found in the board above would be scored as follows:
 #### is, so, us, up = 8 points (2 each)
@@ -57,7 +57,7 @@ in the 4x4 example.
 |----------|----------|
 |s	|t|
 
-**legal words**: as ate set eats seat at eat sat east sate
+**legal words**: as, ate, set, eats, seat, at, eat, sat, east, sate
 #### This solution scores 2*2 + 4*4 + 4*6 = 44 points total
 
 # Elixir:
@@ -95,9 +95,9 @@ slices – each slice is a row of the board. The legal word list will be passed 
 an immutable Vector of Strings.
 - **Output:** Your boggle function will return a HashMap, whose keys are the words you’ve
 found (String) and whose values are Vectors of pair tuples representing character
-coordinates. Documentation for Vector and HashMap is below.
-https://doc.rust-lang.org/std/vec/struct.Vec.html
-https://doc.rust-lang.org/std/collections/struct.HashMap.html
+coordinates.
+- Documentation for [Vector](https://doc.rust-lang.org/std/vec/struct.Vec.html) and [HashMap](https://doc.rust-lang.org/std/collections/struct.HashMap.html)
+
 
 Run Tester using 
 ```
